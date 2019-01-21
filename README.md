@@ -6,7 +6,7 @@ See <a href="http://maple.scot/index.php/our-games/18-pig-pens">here</a> for how
 
 It is a simple game aimed at children from 4 years and up.
 
-** Background
+### Background
 
 I've been a hobbiest game developer for a number of years.
 Most of the games I have developed have been in Java using the libGdx framework in collaberation with my friend Troy Peterson.
@@ -17,12 +17,12 @@ Recently I decided to try making a game in Unity. I had done a bit of C# before 
 
 I have made the game open source because I don't really consider the game idea to be mine and because I would very much like some constructive criticism on the game and how I have made it work in Unity.
 
-** Licence
+### Licence
 
 The source code that I have written is CC0.
 There are a couple of places where I have found some code on the internet and modified it to suit.
 
-** Dependencies
+### Dependencies
 
 In the full game there are two wav files that came from a purchased licensed unity asset. Obviously I have not included them here.
 These are the click sound when pressing buttons and the audience cheering sound. All other sounds where freely available and I have modified them to fit the game.
