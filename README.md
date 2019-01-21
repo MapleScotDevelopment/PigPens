@@ -23,7 +23,7 @@ The source code that I have written is CC0.
 There are a couple of places where I have found some code on the internet and modified it to suit.
 
 * GenericDialog.cs came from <a href="https://gamedev.stackexchange.com/questions/142293/how-to-make-a-simple-dialog-system-with-yes-no-options-and-pages">this stackexchange question</a>
-* 
+* I18n.cs came from <a href="https://gist.github.com/ditzel/2546768f28df7ca664de4a8dfbbfc778">this gist</a>
 
 The graphic assets are CC3-BY. They are used in other games so I need to protect them in some small way.
 
