@@ -30,7 +30,7 @@ The sound assets are CC0.
 ### Dependencies
 
 In the full game there are two wav files that came from a purchased licensed unity asset. Obviously I have not included them here.
-These are the click sound when pressing buttons and the audience cheering sound. All other sounds where freely available and I have modified them to fit the game.
+These are the click sound when pressing buttons and the audience cheering sound. All other sounds were freely available and I have modified them to fit the game.
 
 The game depends on the DOTween and TextMeshPro unity assets which are freely available on the asset store.
 
