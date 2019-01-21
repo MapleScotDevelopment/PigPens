@@ -71,3 +71,31 @@ It's a good idea not to give pens away. Try to place your fences so that the nex
 It's a good lesson for young children to learn
 
 
+### Moving to Unity
+
+The big question, how was it moving to Unity after usig a framework like libGdx?
+
+Well it was both easy and hard.
+The easy parts:
+
+Producing binaries for windows, mac, linux, android and iOS all from my windows laptop (with some help from my macbook for the ios build). Very easy and very quick once you have done it a few times.
+
+Consistency. The game works identically on all of the above systems with no os specific code.
+
+The hard:
+
+Not doing everything in code. I am a coder (this is obvious from the artwork), I am used to doing everything in code. For example when it came to making the fence buttons my firt reaction was to write a piece of code that knew where to put the first button and the horizontal and vertical distances between the buttons and generate them all in code. Then I stopped and thought no, the unity way would be to copy and paste the button each time and move it to the correct location. Then later I realised I should have made it a prefab first and had to add that retro-actively.
+
+The learning curve. There is a lot to learn and you have to learn the unity way of doing things. This is hard. The animation system stumped me quite a bit which is why I use DOTween in code for quite a few things. DOTween is very similar to the <a href="https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/actions/Actions.html">Actions</a> part of libGdx.
+
+Particle systems. I still don't get it. It still doesn't work how I wanted it to. Not sure it ever will. I need to spend a lot more time on this.
+
+2D is still 3D. Rotating things around the Y axis to get them to face the opposite way? Yup ok I get it but its still a bit weird.
+
+UI. libGdx has better support for UI than Unity. Way to much work for simple stuff.
+
+### Conclusion
+
+I like it. I like the ability to see how things are going to look so quickly. I like attaching small pieces of code to objects for very specific things.
+
+In the future I can see me making more games with Unity. Hopefully Troy will have more time to work on stuff as there is quite a big project we have in mind. In the short term I would like to do a version of Pig Pens in Godot to see how it compares as an engine to develop in. I expect its quite similar in many ways.
