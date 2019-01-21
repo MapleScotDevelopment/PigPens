@@ -21,6 +21,11 @@ I have made the game open source because I don't really consider the game idea t
 
 The source code that I have written is CC0.
 There are a couple of places where I have found some code on the internet and modified it to suit.
+**TO-DO**: Add list of source files
+
+The graphic assets are CC3-BY. They are used in other games so I need to protect them in some small way.
+
+The sound assets are CC0.
 
 ### Dependencies
 
@@ -28,3 +33,39 @@ In the full game there are two wav files that came from a purchased licensed uni
 These are the click sound when pressing buttons and the audience cheering sound. All other sounds where freely available and I have modified them to fit the game.
 
 The game depends on the DOTween and TextMeshPro unity assets which are freely available on the asset store.
+
+
+### How to Play
+
+It is a simple game aimed at children from 4 years and up.
+
+See the maple.scot website for how to make your own Pig Pens physical board game to play at home.
+
+The video game is mostly the same as the physical game.
+
+#### Rules
+Each Player picks a colour of Piggy and is given
+
+* 6 piggies for a 2 player game
+* 5 piggies for a 3 player game
+* 4 piggies for a 4 player game
+
+Play starts with the Pink pig and moves clockwise
+
+Each player takes a turn going to the barn to get a fence piece. Spin the spinner to find out what you get from the barn.
+
+* 1 Fence piece - Take a fence piece and place it on the board at the edge of a square
+* 2 Fence pieces - Take 2 fence pieces and place them on the board at the edges of squares
+* Bad Piggy - The bad piggy runs away - miss this turn
+
+Closing a pen - If you can place a fence piece to finish a square then you win that square - 1 of your piggies will jump in that square and OINK with satisfaction!
+
+The winner is the first player to pen all of their piggies.
+ 
+
+#### Strategy
+It's a good idea not to give pens away. Try to place your fences so that the next player can't steal a pen from you.
+
+It's a good lesson for young children to learn
+
+
