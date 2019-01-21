@@ -21,7 +21,9 @@ I have made the game open source because I don't really consider the game idea t
 
 The source code that I have written is CC0.
 There are a couple of places where I have found some code on the internet and modified it to suit.
-**TO-DO**: Add list of source files
+
+* GenericDialog.cs came from <a href="https://gamedev.stackexchange.com/questions/142293/how-to-make-a-simple-dialog-system-with-yes-no-options-and-pages">this stackexchange question</a>
+* 
 
 The graphic assets are CC3-BY. They are used in other games so I need to protect them in some small way.
 
