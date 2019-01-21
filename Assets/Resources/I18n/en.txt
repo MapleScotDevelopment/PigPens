@@ -1,0 +1,18 @@
+FENCE2_PROMPT=Choose where to put your first fence
+BAD_PIGGY_PROMPT=The BAD PIGGY runs away - miss this turn
+SECOND_FENCE_PROMPT=Choose where to put your second fence
+SINGLE_FENCE_PROMPT=Choose where to put your fence
+StartButtonText=START
+CongratulationsText=Congratulations
+WinnerText=You are the winner
+MenuText=menu
+SpinButtonText=spin
+TitleText=Pig Pens
+OkButtonText=OK
+RateButtonText=rate
+RulesTitleText=rules
+RulesText=1. Each Player picks a colour of Piggy and is given\n\n6 piggies for a 2 player game\n5 piggies for a 3 player game\n4 piggies for a 4 player game\n\n2. Play starts with the pink pig and moves clockwise\n\n3. Each player takes a turn going to the barn to get a fence piece. Spin the spinner to find out what you get from the barn.\n\n  * 1 Fence piece - Take a fence piece and place it on the board at the edge of a square\n  * 2 Fence pieces - Take 2 fence pieces and place them on the board at the edges of squares\n  * Bad Piggy - The bad piggy runs away - miss this turn\n\n4. Closing a pen - If you can place a fence piece to finish a square then you win that square - 1 of your piggies will jump in that square and OINK with satisfaction!\n\n5. The winner is the first player to pen all of their piggies.
+StrategyTitleText=Strategy
+StrategyText=It's a good idea not to give pens away. Try to place your fences so that the next player can't steal a pen from you.\n\nIt's a good lesson for young children to learn
+SourceTitleText=Source
+SourceText=I started making this video game because I wanted to learn Unity.\n\nI don't really own the concept of the game and I'm not trying to make any money from it which is why the game is free on all platforms.\n\nAs I'm trying to learn I have also made the source code to the game available online at <link="github"><color="blue">github</color></link>.\n\nIf you wish to contact me about the game you can do so on twitter @<link="twitter"><color="blue">JamesAdurie</color></link> or email: <link="email"><color="blue">james@maple.scot</color></link>
