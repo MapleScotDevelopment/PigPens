@@ -84,6 +84,11 @@ Consistency. The game works identically on all of the above systems with no os s
 
 The hard:
 
+Serialising/Deserialising data to/from json files. Why is this so bad?
+The libgdx json support is fantastic and simple and handles everything thrown at it.
+The unity json support is sorely lacking and can't handle 2d arrays or dictionaries.
+I didn't want to add a dependency just to save game data to file so I worked around the issue but I was tearing my hair out for a while over this.
+
 Not doing everything in code. I am a coder (this is obvious from the artwork), I am used to doing everything in code. For example when it came to making the fence buttons my firt reaction was to write a piece of code that knew where to put the first button and the horizontal and vertical distances between the buttons and generate them all in code. Then I stopped and thought no, the unity way would be to copy and paste the button each time and move it to the correct location. Then later I realised I should have made it a prefab first and had to add that retro-actively.
 
 The learning curve. There is a lot to learn and you have to learn the unity way of doing things. This is hard. The animation system stumped me quite a bit which is why I use DOTween in code for quite a few things. DOTween is very similar to the <a href="https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/actions/Actions.html">Actions</a> part of libGdx.
