@@ -138,11 +138,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c82a0c7310dfb847b5d01f408c2a631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pinkPig: {fileID: 21300000, guid: 2711326925885014e9a92fc80ecaeb23, type: 3}
-  yellowPig: {fileID: 21300000, guid: 32684c53a738a8549b6e87a82bfe6bb9, type: 3}
-  bluePig: {fileID: 21300000, guid: 7d7ce754b333d314bb02d54cc77eda9e, type: 3}
-  greenPig: {fileID: 21300000, guid: d5a5a0eb9136c0340b60ad9e8a952b49, type: 3}
-  borgPig: {fileID: 21300000, guid: 69e46150c7fa74e4abad2691a36efd06, type: 3}
+  pinkPig: PinkPig
+  yellowPig: YellowPig
+  bluePig: BluePig
+  greenPig: GreenPig
+  borgPig: BorgPig
   pigGrunting: {fileID: 0}
 --- !u!114 &114929827579984596
 MonoBehaviour:
@@ -163,8 +163,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2711326925885014e9a92fc80ecaeb23, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

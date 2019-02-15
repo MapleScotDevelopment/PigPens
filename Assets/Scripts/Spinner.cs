@@ -4,19 +4,26 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Spinner : Dialog {
+public class Spinner : Dialog, IThemedObject {
 
     public Image playerImage;
     public TMP_Text playerName;
 
     public Image arrow;
 
-    public Sprite pinkPig;
-    public Sprite yellowPig;
-    public Sprite bluePig;
-    public Sprite greenPig;
-    public Sprite borgPig;
+    public string pinkPig;
+    public string yellowPig;
+    public string bluePig;
+    public string greenPig;
+    public string borgPig;
+
+    private Sprite pinkPigSprite;
+    private Sprite yellowPigSprite;
+    private Sprite bluePigSprite;
+    private Sprite greenPigSprite;
+    private Sprite borgPigSprite;
 
     public AudioClip SpinStart;
     public AudioClip Spin;
@@ -52,6 +59,9 @@ public class Spinner : Dialog {
     private float showY = 0f;
     private float hiddenY = -25f;
 
+    private ThemeController themeController;
+    private Button spinButton;
+
     private void Awake()
     {
         cg = GetComponent<CanvasGroup>();
@@ -62,6 +72,20 @@ public class Spinner : Dialog {
     {
         Random.InitState(System.Environment.TickCount);
         BorgPlayer.spinner = this;
+        // register with the theme controller
+        themeController = ThemeController.Instance;
+        themeController.RegisterThemedObjectHandler(this);
+
+        spinButton = FindObjectOfType<Button>();
+    }
+
+    public void ThemeChanged()
+    {
+        pinkPigSprite = themeController.GetThemedObject<Sprite>(pinkPig);
+        yellowPigSprite = themeController.GetThemedObject<Sprite>(yellowPig);
+        bluePigSprite = themeController.GetThemedObject<Sprite>(bluePig);
+        greenPigSprite = themeController.GetThemedObject<Sprite>(greenPig);
+        borgPigSprite = themeController.GetThemedObject<Sprite>(borgPig);
     }
 
     private void SetPlayer()
@@ -76,22 +100,22 @@ public class Spinner : Dialog {
             case PlayerColor.BLANK:
                 break;
             case PlayerColor.PINK:
-                playerImage.sprite = pinkPig;
+                playerImage.sprite = pinkPigSprite;
                 break;
             case PlayerColor.YELLOW:
-                playerImage.sprite = yellowPig;
+                playerImage.sprite = yellowPigSprite;
                 break;
             case PlayerColor.BLUE:
-                playerImage.sprite = bluePig;
+                playerImage.sprite = bluePigSprite;
                 break;
             case PlayerColor.GREEN:
-                playerImage.sprite = greenPig;
+                playerImage.sprite = greenPigSprite;
                 break;
             case PlayerColor.COMPUTER1:
-                playerImage.sprite = borgPig;
+                playerImage.sprite = borgPigSprite;
                 break;
             case PlayerColor.COMPUTER2:
-                playerImage.sprite = borgPig;
+                playerImage.sprite = borgPigSprite;
                 playerImage.transform.Rotate(0, 180, 0);
                 break;
         }
@@ -177,6 +201,9 @@ public class Spinner : Dialog {
 
     public void OnSpin()
     {
+        spinButton.enabled = false;
+        spinButton.enabled = true;
+        EventSystem.current.SetSelectedGameObject(null);
         if (!spinning)
         {
             switch (Random.Range(1, 5))

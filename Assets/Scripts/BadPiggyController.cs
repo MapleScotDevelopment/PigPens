@@ -3,19 +3,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BadPiggyController : MonoBehaviour {
+public class BadPiggyController : MonoBehaviour, IThemedObject {
 
     private Animator animator;
     private AudioSource squeal;
+
+    private ThemeController themeController;
+
     public const float BAD_PIGGY_DELAY = 1.75f;
-    private readonly float LEFT_SIDE=-28;
-    private readonly float RIGHT_SIDE = 28;
+    private const float LEFT_SIDE=-28;
+    private const float RIGHT_SIDE = 28;
+
+    private void Awake()
+    {
+        // register with the theme controller
+        themeController = ThemeController.Instance;
+        themeController.RegisterThemedObjectHandler(this);
+        animator = GetComponentInParent<Animator>();
+    }
 
     // Use this for initialization
     void Start () {
-        animator = GetComponentInParent<Animator>();
         squeal = GetComponentInParent<AudioSource>();
-	}
+    }
+
+    public void ThemeChanged()
+    {
+        var badPiggyAnim = themeController.GetThemedObject<AnimationClip>("BadPiggyAnim");
+        var badPiggyAnimController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+
+        var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+        foreach (var a in badPiggyAnimController.animationClips)
+            anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(a, badPiggyAnim));
+
+        badPiggyAnimController.ApplyOverrides(anims);
+
+        animator.runtimeAnimatorController = badPiggyAnimController;
+    }
 
     public void Trigger()
     {

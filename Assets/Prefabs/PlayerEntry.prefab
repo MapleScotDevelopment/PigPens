@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 224546611061322442}
   - component: {fileID: 222749756880998396}
   - component: {fileID: 114110695865679878}
+  - component: {fileID: 114630281944609058}
   m_Layer: 5
   m_Name: Pig
   m_TagString: Untagged
@@ -229,9 +230,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9b531fcc49cd2c749b7fda8e539e67e8, type: 2}
-  m_sharedMaterial: {fileID: 21045659152042746, guid: 9b531fcc49cd2c749b7fda8e539e67e8,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -435,6 +435,18 @@ MonoBehaviour:
   playerColor: 0
   inputField: {fileID: 0}
   toggle: {fileID: 0}
+--- !u!114 &114630281944609058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1555521191304564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7614b078831ff4f4ebe5e2c2d350ff3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: PinkPig
 --- !u!114 &114701115931531420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -456,9 +468,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Enter text...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9b531fcc49cd2c749b7fda8e539e67e8, type: 2}
-  m_sharedMaterial: {fileID: 21045659152042746, guid: 9b531fcc49cd2c749b7fda8e539e67e8,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -535,7 +546,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -666,7 +677,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 9b531fcc49cd2c749b7fda8e539e67e8, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1

@@ -150,7 +150,7 @@ public class GameBoard : MonoBehaviour {
         for (int i = 0; i < BoardData.VERT_ROWS; i++)
         {
             for(int j=0; j < BoardData.HORIZ_COLS; j++)
-                pens[i,j].SetPigColor(boardData.pens[i,j]);
+                pens[i,j].SetPigColor(boardData.pens[i,j], false);
         }
     }
 
@@ -269,7 +269,7 @@ public class GameBoard : MonoBehaviour {
                 if (k.Key != -1)
                 {
                     isPigPenned = true;
-                    pens[k.Key,k.Value].SetPigColor(activePlayer);
+                    pens[k.Key,k.Value].SetPigColor(activePlayer, true);
                     SetPigCount(activePlayer);
                     if (GameController.GetPlayerData(activePlayer).numPigs<=0)
                     {

@@ -21,8 +21,6 @@ public class GameController : MonoBehaviour
 
     private static GameController Instance {
         get {
-            if (_instance == null)
-                _instance = new GameController();
             return _instance;   
         }
     }
@@ -43,7 +41,16 @@ public class GameController : MonoBehaviour
         // Switch to our initially loaded state
         if (oldGameState == GameState.MENU && gameDataController.PlayState == GameState.MENU)
             DialogManager.Show("MainMenu");
+
         DoStateChange(gameDataController.PlayState);
+        StartCoroutine(InitialiseTheme());
+    }
+
+    private IEnumerator InitialiseTheme()
+    {
+        yield return new WaitForFixedUpdate();
+
+        ThemeController.Instance.SwitchTheme(ThemeController.Instance.CurrentThemeName);
     }
 
     private void SetNumPigs(int pigCount)
@@ -287,5 +294,15 @@ public class GameController : MonoBehaviour
     static public void StateChange(GameState newState)
     {
         Instance.DoStateChange(newState);
+    }
+
+    static public int GetCurrentTheme()
+    {
+        return Instance.gameDataController.gameData.currentTheme;
+    }
+
+    static public void SetCurrentTheme(int theme)
+    {
+        Instance.gameDataController.gameData.currentTheme = theme;
     }
 }

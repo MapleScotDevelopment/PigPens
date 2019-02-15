@@ -4,6 +4,7 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class About : Dialog
 {
@@ -46,16 +47,19 @@ public class About : Dialog
 
     public void OnOk()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         DialogManager.Hide("About");
     }
 
     public void OnRate()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         Application.OpenURL(UrlHelper.AppUrl);
     }
 
     public void OnMapleScotUrl()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         Application.OpenURL(UrlHelper.MapleScotUrl);
     }
 }

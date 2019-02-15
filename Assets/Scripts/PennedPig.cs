@@ -3,28 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PennedPig : MonoBehaviour {
+public class PennedPig : MonoBehaviour, IThemedObject {
 
-    public Sprite pinkPig;
-    public Sprite yellowPig;
-    public Sprite bluePig;
-    public Sprite greenPig;
-    public Sprite borgPig;
+    PlayerColor current = PlayerColor.BLANK;
+
+    public string pinkPig;
+    public string yellowPig;
+    public string bluePig;
+    public string greenPig;
+    public string borgPig;
+
+    private Sprite pinkPigSprite;
+    private Sprite yellowPigSprite;
+    private Sprite bluePigSprite;
+    private Sprite greenPigSprite;
+    private Sprite borgPigSprite;
 
     public AudioSource pigGrunting;
 
     ParticleSystem particles;
     Image image;
 
-	// Use this for initialization
-	void Awake () {
+    private ThemeController themeController;
+
+    // Use this for initialization
+    void Awake () {
         particles = GetComponentInParent<ParticleSystem>();
         image = GetComponentInParent<Image>();
         pigGrunting = GetComponentInParent<AudioSource>();
-	}
+        // register with the theme controller
+        themeController = ThemeController.Instance;
+        themeController.RegisterThemedObjectHandler(this);
+    }
 
-    public void SetPigColor(PlayerColor c)
+    public void ThemeChanged()
     {
+        pinkPigSprite = themeController.GetThemedObject<Sprite>(pinkPig);
+        yellowPigSprite = themeController.GetThemedObject<Sprite>(yellowPig);
+        bluePigSprite = themeController.GetThemedObject<Sprite>(bluePig);
+        greenPigSprite = themeController.GetThemedObject<Sprite>(greenPig);
+        borgPigSprite = themeController.GetThemedObject<Sprite>(borgPig);
+        SetPigColor(current, false);
+    }
+
+    public void SetPigColor(PlayerColor c, bool inGame)
+    {
+        current = c;
         if (c == PlayerColor.BLANK)
         {
             image.enabled = false;
@@ -39,32 +63,35 @@ public class PennedPig : MonoBehaviour {
         {
             case PlayerColor.PINK:
                 image.enabled = true;
-                image.sprite = pinkPig;
+                image.sprite = pinkPigSprite;
                 break;
             case PlayerColor.YELLOW:
                 image.enabled = true;
-                image.sprite = yellowPig;
+                image.sprite = yellowPigSprite;
                 break;
             case PlayerColor.BLUE:
                 image.enabled = true;
-                image.sprite = bluePig;
+                image.sprite = bluePigSprite;
                 break;
             case PlayerColor.GREEN:
                 image.enabled = true;
-                image.sprite = greenPig;
+                image.sprite = greenPigSprite;
                 break;
             case PlayerColor.COMPUTER1:
                 image.enabled = true;
-                image.sprite = borgPig;
+                image.sprite = borgPigSprite;
                 break;
             case PlayerColor.COMPUTER2:
                 image.enabled = true;
-                image.sprite = borgPig;
+                image.sprite = borgPigSprite;
                 image.transform.Rotate(0, 180, 0);
                 break;
         }
 
-        particles.Play();
-        pigGrunting.Play();
+        if (inGame)
+        {
+            particles.Play();
+            pigGrunting.Play();
+        }
     }
 }

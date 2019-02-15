@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MainMenu : Dialog
 {
@@ -57,11 +58,13 @@ public class MainMenu : Dialog
 
     public void OnStart()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         GameController.StartGame();
     }
 
     public void OnExit()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         cg.interactable = false;
         GenericDialog dialog = GenericDialog.Instance();
         dialog.Title("Quit Game?")
@@ -74,6 +77,7 @@ public class MainMenu : Dialog
 
     public void OnAbout()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         DialogManager.Show("About");
     }
 }

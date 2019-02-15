@@ -7,4 +7,5 @@ public partial class GameData
     public BoardData boardData;
     public GameState playState;
     public PlayerColor current;
+    public int currentTheme;
 }

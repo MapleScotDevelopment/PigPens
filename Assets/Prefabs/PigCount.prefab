@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 224988959435731502}
   - component: {fileID: 222322393847527552}
   - component: {fileID: 114882126805358026}
+  - component: {fileID: 114154316537490712}
   m_Layer: 5
   m_Name: PigCount
   m_TagString: Untagged
@@ -28,6 +29,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114154316537490712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894394210167136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15b8704c59366d42b43717cfec15115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114882126805358026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -49,7 +61,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9b531fcc49cd2c749b7fda8e539e67e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 21045659152042746, guid: 9b531fcc49cd2c749b7fda8e539e67e8,
     type: 2}
   m_fontSharedMaterials: []
@@ -58,7 +70,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.48235297, g: 0.5921569, b: 0.882353, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -130,7 +142,7 @@ MonoBehaviour:
   m_spriteAnimator: {fileID: 0}
   m_isInputParsingRequired: 0
   m_inputSource: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
